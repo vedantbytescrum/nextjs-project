@@ -1,0 +1,39 @@
+.section-hero{
+    background-image: url('../../img/hero-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 95vh;
+    position: relative;
+    &::before{
+        content: "";
+        background-image: url('../../img/shape.png');
+        background-size: cover;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        min-height: 339px;
+        min-width: 146px;
+        z-index: 1;
+    }
+    &::after{
+        content: "";
+        background-image: url('../../img/shape-2.png');
+        background-size: cover;
+        position: absolute;
+        bottom: 100px;
+        right: 0;
+        z-index: 1;
+        min-height: 372px;
+        min-width: 172px;
+    }
+    .container {
+        height: 95vh;
+        display: flex;
+        align-items: center;
+        .hero--content{
+            &__subheads{
+                color: $color-primary;
+            }
+        }
+    }
+}

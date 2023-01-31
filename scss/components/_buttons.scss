@@ -1,0 +1,12 @@
+button-one{
+    background-image: $gradient-one;
+    display: inline-block;
+    font-size: 14px;
+    color: $color-white;
+    padding: 16px 30px;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
