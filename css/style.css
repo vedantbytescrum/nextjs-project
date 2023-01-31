@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif; }
 
@@ -7,23 +11,88 @@ p, a, li {
 a {
   text-decoration: none !important; }
 
-button-one {
-  background-image: linear-gradient(to right, #ff4904 25%, #f50366 50%, #ff4904 75%, #f50366 100%);
-  display: inline-block;
-  font-size: 14px;
+.heading-primary, .heading-secondary {
+  font-size: 48px;
+  font-weight: 700;
+  color: #121212;
+  text-transform: uppercase;
+  margin-bottom: 0; }
+
+.heading-secondary {
+  color: #ff4904; }
+
+.heading-tertiary {
+  font-size: 18px;
+  color: #ff4904;
+  font-weight: 700;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  text-transform: uppercase; }
+
+.paragraph-main {
+  padding-top: 0;
+  margin: 0;
+  font-style: normal;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+  color: #535353; }
+
+button:focus {
+  box-shadow: none !important; }
+
+.logo {
+  position: relative;
+  color: #fff; }
+  .logo h2 {
+    text-transform: capitalize;
+    font-weight: 900;
+    margin: 0 !important;
+    padding: 0 !important; }
+  .logo span {
+    position: absolute;
+    right: -50px;
+    bottom: 10px;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1;
+    color: #ff4904; }
+  .logo strong {
+    text-transform: uppercase;
+    bottom: -20px;
+    letter-spacing: 5px; }
+
+.navbar-nav .nav-link {
   color: #fff;
-  padding: 16px 30px;
-  border-radius: 3px;
-  background-repeat: no-repeat;
-  background-size: 200% 200%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative; }
+  .navbar-nav .nav-link::before {
+    content: "";
+    height: 2px;
+    width: 0;
+    left: 0.5rem;
+    bottom: 0;
+    position: absolute;
+    background-color: #ff4904;
+    transition: all 0.4s; }
+  .navbar-nav .nav-link:not(:last-child) {
+    padding-right: 25px !important; }
+  .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+    color: #ff4904; }
+  .navbar-nav .nav-link:hover::before {
+    width: calc(100% - 25px - 0.5rem); }
+  .navbar-nav .nav-link:active {
+    color: #ff4904; }
 
 .section-hero {
   background-image: url("../../img/hero-bg.jpeg");
   background-size: cover;
   background-position: center;
-  min-height: 95vh;
+  min-height: 100vh;
   position: relative; }
   .section-hero::before {
     content: "";
@@ -46,8 +115,55 @@ button-one {
     min-height: 372px;
     min-width: 172px; }
   .section-hero .container {
-    height: 95vh;
+    height: 100vh;
     display: flex;
     align-items: center; }
     .section-hero .container .hero--content__subheads {
       color: #ff4904; }
+    .section-hero .container .hero--content__mainheads {
+      font-size: 120px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #fff; }
+    .section-hero .container .hero--content__mainheads-two {
+      font-size: 120px;
+      font-weight: 700;
+      line-height: 1;
+      padding-bottom: 30px;
+      text-transform: uppercase;
+      color: #ff4904; }
+    .section-hero .container .hero--content__mainpara {
+      font-size: 18px;
+      max-width: 570px;
+      color: #d8d8d8;
+      padding-bottom: 20px; }
+    .section-hero .container .hero--content__mainbutton {
+      background-image: linear-gradient(to right, #ff4904 25%, #f50366 50%, #ff4904 75%, #f50366 100%);
+      display: inline-block;
+      font-size: 14px;
+      color: #fff;
+      padding: 16px 30px;
+      border-radius: 3px;
+      background-repeat: no-repeat;
+      background-size: 200% 200%;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s; }
+      .section-hero .container .hero--content__mainbutton a {
+        color: #fff; }
+
+.section-about {
+  padding: 30px 0; }
+  .section-about .aboutus__img {
+    position: relative; }
+    .section-about .aboutus__img img {
+      position: absolute; }
+    .section-about .aboutus__img .image-one {
+      left: 0;
+      top: 5px; }
+    .section-about .aboutus__img .image-two {
+      left: 0;
+      top: 20px; }
+    .section-about .aboutus__img .image-three {
+      right: 0;
+      top: 25px; }

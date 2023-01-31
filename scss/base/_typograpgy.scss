@@ -7,3 +7,32 @@ font-family: 'Roboto', sans-serif;
 a{
     text-decoration: none!important;
 }
+.heading-primary{
+    font-size: 48px;
+    font-weight: 700;
+    color: $color-black;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    
+}
+.heading-secondary{
+    @extend .heading-primary;
+    color: $color-primary;
+}
+.heading-tertiary{
+    font-size: 18px;
+    color: $color-primary;
+    font-weight: 700;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+.paragraph-main{
+    padding-top: 0;
+    margin: 0;
+    font-style: normal;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 16px;
+    color: $color-text;
+}

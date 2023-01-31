@@ -2,7 +2,7 @@
     background-image: url('../../img/hero-bg.jpeg');
     background-size: cover;
     background-position: center;
-    min-height: 95vh;
+    min-height: 100vh;
     position: relative;
     &::before{
         content: "";
@@ -27,13 +27,61 @@
         min-width: 172px;
     }
     .container {
-        height: 95vh;
+        height: 100vh;
         display: flex;
         align-items: center;
         .hero--content{
             &__subheads{
                 color: $color-primary;
             }
+            &__mainheads{
+                font-size: 120px;
+                font-weight: 700;
+                line-height: 1;
+                text-transform: uppercase;
+                color: $color-white;
+            }
+            &__mainheads-two{
+                font-size: 120px;
+                font-weight: 700;
+                line-height: 1;
+                padding-bottom: 30px;
+                text-transform: uppercase;
+                color: $color-primary;
+            }
+            &__mainpara{
+                font-size: 18px;
+    max-width: 570px;
+    color: $color-tertiary;
+    padding-bottom: 20px;
+            }
+            &__mainbutton{
+                @include buttonOne();
+                a{
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+.section-about{
+    padding: 30px 0;
+    .aboutus__img {
+        position: relative;
+        img{
+            position: absolute;
+        }
+        .image-one{
+            left: 0;
+            top: 5px;
+        }
+        .image-two{
+            left: 0;
+            top: 20px;
+        }
+        .image-three{
+            right: 0;
+            top: 25px;
         }
     }
 }

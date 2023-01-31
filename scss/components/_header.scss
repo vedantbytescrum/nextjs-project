@@ -1,0 +1,58 @@
+.logo{
+    position: relative;
+    color: $color-white;
+    h2{
+        text-transform: capitalize;
+    font-weight: 900;
+        margin: 0!important;
+        padding: 0!important;
+    }
+    span{
+        position: absolute;
+        right: -50px;
+        bottom: 10px;
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 1;
+        color: $color-primary;
+    }
+    strong{
+        text-transform: uppercase;
+        bottom: -20px;
+    letter-spacing: 5px;
+        
+    }
+}
+.navbar-nav{
+    .nav-link{
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        position: relative;
+        &::before{
+            content: "";
+            height: 2px;
+            width: 0;
+            left: 0.5rem;
+            bottom: 0;
+            position: absolute;
+            background-color: $color-primary;
+            transition: all 0.4s;
+        }
+        &:not(:last-child){
+            padding-right: 25px!important;
+        }
+        &:hover, &:focus{
+            color: $color-primary;
+        }
+        &:hover::before{
+            width: calc(100% - 25px - 0.5rem);
+        }
+        &:active{
+            color: $color-primary;
+        }
+    }
+}
