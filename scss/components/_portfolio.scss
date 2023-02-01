@@ -1,3 +1,50 @@
 .portfolio-project{
-    
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    padding: 10px;
+    margin-bottom: 4em;
+    &__list{
+        display: inline-block;
+    position: relative;
+    &::after{
+        content: "";
+        background-color:rgba($color-black, 0.5);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+        z-index: 0;
+        transition: all 0.5s;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+        .portfolio-content{
+            position: absolute;
+            left: 15px;
+            bottom: 0;
+            transform: translateY(10%);
+            opacity: 0;
+            color: $color-white;
+            transition: all 0.4s;
+            z-index: 1;
+            h4{
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            h6{
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+        }
+        &:hover .portfolio-content{
+            opacity: 1;
+            left: 15px;
+            bottom: 15px;
+            transform: translate(0);
+
+        }
+    }
 }

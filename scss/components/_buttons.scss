@@ -2,3 +2,12 @@ button:focus{
     box-shadow: none!important;
 
 }
+.btns-area{
+    text-align: center;
+    .primary-button{
+        @include buttonOne();
+        a{
+            color: $color-white;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+// Primary Listing
+
+ul.primarylisting {
+    list-style: none;
+    column-count: 2;
+    li{
+        padding-bottom: 16px;
+        span{
+            background-image: $gradient-one;
+            color: transparent;
+    -webkit-background-clip: text;
+    font-size: 20px;
+    padding-right: 16px;
+        }
+    }
+}
