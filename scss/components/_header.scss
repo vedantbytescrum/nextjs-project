@@ -26,6 +26,9 @@
 }
 .navbar{
     transition: all 0.4s ease-out;
+    @include for-small-screen{
+        background-color: $color-black;
+    }
     .nav-link{
         color: $color-white;
         text-transform: uppercase;

@@ -6,9 +6,11 @@
     background-color: $color-white;
     border-radius: 3px;
     padding: 3rem;
-    transform: skewX(-12deg);
+    @include for-large-screen{
+        transform: skewX(-12deg);
     & > * {
         transform: skewX(12deg);
+    }
     }
     &__shape{
         width: 10rem;

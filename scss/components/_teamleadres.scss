@@ -1,0 +1,89 @@
+.team-info{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    transition: all 0.4s;
+    &__photo{
+        min-height: 250px;
+        position: relative;
+    }
+    &__socialmedia{
+        position: absolute;
+        background-image: url('../../img/shape-03.png');
+        background-size: cover;
+        background-position: bottom;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 50px 20px 30px;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition:all 0.4s;
+        transition: all 0.4s;
+        ul{
+            display: flex;
+            list-style: none;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            li{
+                    padding: 0;
+                    height: 35px;
+                    width: 35px;
+                    border: 2px solid $color-white;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: 0.4s;
+                a{
+                    color: $color-white;
+                }
+                &:hover > a{
+                    color: $color-primary;
+                }
+                &:hover{
+                    background-color: $color-white;
+                }
+            }
+        }
+    }
+    &__leaderprofile{
+        padding: 15px 0 18px 0;
+        h4, h5{
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 0!important;
+        }
+        h4 a{
+            font-weight: 800;
+            font-size: 20px;
+            transition: all 0.4s;
+            color: $color-black;
+        }
+        h5 a{
+            font-weight: 500;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: all 0.4s;
+            color: $color-text;
+
+        }
+    }
+    &:hover &__socialmedia{
+        bottom: 0;
+    opacity: 1;
+    visibility: visible;
+    }
+    &:hover &__leaderprofile{
+        h4 a{
+            color: $color-primary!important;
+        }
+        h5 a{
+            color: $color-secondary!important;
+        }
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}

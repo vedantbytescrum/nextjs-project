@@ -82,7 +82,7 @@ button:focus {
       bottom: 0;
       left: 1.5em; }
     .composition .composition__photo--p3 {
-      top: 0;
+      top: 1em;
       right: 15%; }
     .composition .composition__photo:hover {
       transform: scale(1.05);
@@ -136,6 +136,9 @@ button:focus {
 
 .navbar {
   transition: all 0.4s ease-out; }
+  @media (max-width: 992px) {
+    .navbar {
+      background-color: #121212; } }
   .navbar .nav-link {
     color: #fff;
     text-transform: uppercase;
@@ -229,10 +232,12 @@ ul.primarylisting {
   box-shadow: 0 3rem 6rem rgba(18, 18, 18, 0.1);
   background-color: #fff;
   border-radius: 3px;
-  padding: 3rem;
-  transform: skewX(-12deg); }
-  .story > * {
-    transform: skewX(12deg); }
+  padding: 3rem; }
+  @media (min-width: 992.5px) {
+    .story {
+      transform: skewX(-12deg); }
+      .story > * {
+        transform: skewX(12deg); } }
   .story__shape {
     width: 10rem;
     height: 10rem;
@@ -259,6 +264,77 @@ ul.primarylisting {
     transform: translate(-50%, -50%); }
   .story:hover .story__shape img {
     filter: grayscale(1) contrast(1.1); }
+
+.team-info {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  transition: all 0.4s; }
+  .team-info__photo {
+    min-height: 250px;
+    position: relative; }
+  .team-info__socialmedia {
+    position: absolute;
+    background-image: url("../../img/shape-03.png");
+    background-size: cover;
+    background-position: bottom;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 20px 30px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s; }
+    .team-info__socialmedia ul {
+      display: flex;
+      list-style: none;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0; }
+      .team-info__socialmedia ul li {
+        padding: 0;
+        height: 35px;
+        width: 35px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s; }
+        .team-info__socialmedia ul li a {
+          color: #fff; }
+        .team-info__socialmedia ul li:hover > a {
+          color: #ff4904; }
+        .team-info__socialmedia ul li:hover {
+          background-color: #fff; }
+  .team-info__leaderprofile {
+    padding: 15px 0 18px 0; }
+    .team-info__leaderprofile h4, .team-info__leaderprofile h5 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 0 !important; }
+    .team-info__leaderprofile h4 a {
+      font-weight: 800;
+      font-size: 20px;
+      transition: all 0.4s;
+      color: #121212; }
+    .team-info__leaderprofile h5 a {
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 1px;
+      transition: all 0.4s;
+      color: #535353; }
+  .team-info:hover .team-info__socialmedia {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible; }
+  .team-info:hover .team-info__leaderprofile h4 a {
+    color: #ff4904 !important; }
+  .team-info:hover .team-info__leaderprofile h5 a {
+    color: #f50366 !important; }
+  .team-info:hover {
+    cursor: pointer; }
 
 .section-hero {
   background-image: url("../../img/hero-bg.jpeg");
@@ -395,16 +471,34 @@ ul.primarylisting {
 
 .section-counterarea {
   background-image: url("../../img/bcrumb-bg.jpeg");
-  padding: 80px 0; }
+  padding: 80px 0;
+  background-attachment: fixed; }
 
 .section-stories {
   background-color: rgba(216, 216, 216, 0.3);
   padding: 5em 0; }
 
 .section-portfolio {
-  padding: 5em 0; }
+  padding: 5em 0 30px 0; }
 
 .section-teamleaders {
   padding: 30px 0; }
+  .section-teamleaders .btns-area {
+    margin-top: 5em; }
   .section-teamleaders .teamleaders--content h2 {
     display: inline-block; }
+
+.section-hiring {
+  background-image: url(../../img/hire-bg.jpg);
+  background-size: cover;
+  background-position: 77% 15em;
+  padding: 10em 0;
+  background-attachment: fixed; }
+  .section-hiring .heading-secondary {
+    color: #fff;
+    text-align: center; }
+  .section-hiring .btns-area {
+    margin-top: 30px; }
+
+.section-ourclients {
+  padding: 30px 0; }
